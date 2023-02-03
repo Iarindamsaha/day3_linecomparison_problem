@@ -36,14 +36,21 @@ public class Main {
         Double length2=Math.sqrt((x4-x3)*(x4-x3)+(y4-y3)*(y4-y3));
         System.out.println("Length="+length);
 
-        boolean res = length2.equals(length);
+        int res = length.compareTo(length2);
 
-        if ( res == true ) {
-            System.out.println("Lines are equal");
+        if ( res < 0 ) {
+            System.out.println(length2+" is Greater Than "+length);
+        } else if (res == 0) {
+            System.out.println(length2+" is Equal to "+length);
+
         }
-        else {
-            System.out.println("Lines are not equal");
+        else{
+            System.out.println(length2+" is Less Than "+length);
+
         }
+
+
+
         sc.close();
     }
 }
